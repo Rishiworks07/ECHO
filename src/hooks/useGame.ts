@@ -169,11 +169,17 @@ export function useGame(): UseGameReturn {
     const situation = getRandomSituation([]);
     usedSituationIdsRef.current = [situation.id];
     
-    await supabase.from("rounds").insert({
+    await supabase.from("rounds").upsert({
       game_id: game.id,
       round_number: 1,
       situation_id: situation.id,
-    });
+    },
+    {
+      onConflict: 'game_id,round_number'
+    }
+  );
+
+  
   };
 
   const createRoom = async (playerName: string) => {
