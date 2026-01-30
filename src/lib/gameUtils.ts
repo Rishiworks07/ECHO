@@ -71,5 +71,5 @@ export function getRandomChoice(): Choice {
 
 export const TIMER_DURATION = 15; // seconds
 export const TOTAL_ROUNDS = 5;
-export const SITUATION_REVEAL_DURATION = 3000; // ms
+export const SITUATION_REVEAL_DURATION = 7000; // ms
 export const RESULT_DISPLAY_DURATION = 4000; // ms

@@ -40,7 +40,7 @@ export function SituationScreen({
   return (
     <div className="flex min-h-screen flex-col items-center justify-center p-6">
       <div 
-        className={`text-center max-w-2xl transition-all duration-500 ${
+        className={`text-center max-w-2xl transition-all duration-1500 ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
         }`}
       >
